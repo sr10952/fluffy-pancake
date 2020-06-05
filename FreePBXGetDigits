@@ -1,0 +1,6 @@
+[get-order]
+exten => s,1,Noop(Entering context get-order in extensions_custom.conf)
+exten => s,n,Answer
+exten => s,n,Read(dtmf-in,,,,,10) 
+exten => s,n,Set(CALLERID(name)=${dtmf-in})
+exten => s,n(finish),Return
